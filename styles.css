@@ -66,6 +66,10 @@ section {
     margin: 0 auto;
     padding: 60px 40px;
 }
+a{
+    color: #b84800;
+    text-decoration: none;
+}
 
 h1 {
   font-family: 'Outfit', sans-serif;
@@ -75,7 +79,7 @@ h1 {
 h2{
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
-    font-size: 1.rem;
+    font-size: 1.5rem;
 }
 
 p, li {
