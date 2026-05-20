@@ -1,0 +1,181 @@
+/* Developer Portfolio Background - CSS Only */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@600;700;800&display=swap');
+
+:root {
+  --bg-primary: #07111f;
+  --bg-secondary: #0b1728;
+  --text-primary: #e7f6ff;
+  --accent-blue: #38bdf8;
+  --accent-orange: #f59e0b;
+  --accent-green: #22c55e;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(56, 189, 248, 0.24), transparent 28%),
+    radial-gradient(circle at 82% 24%, rgba(34, 197, 94, 0.16), transparent 28%),
+    radial-gradient(circle at 50% 88%, rgba(245, 158, 11, 0.12), transparent 30%),
+    linear-gradient(135deg, #07111f 0%, #0b1728 42%, #101827 100%);
+  color: var(--text-primary);
+}
+
+/* Grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 74%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Light rays overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(56, 189, 248, 0.08) 38%, transparent 68%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.025) 0px,
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Floating orbs */
+.orb {
+  position: fixed;
+  border-radius: 999px;
+  filter: blur(1px);
+  opacity: 0.85;
+  animation: float 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+.orb-one {
+  width: 18%;
+  height: 18%;
+  min-width: 120px;
+  min-height: 120px;
+  left: 7%;
+  top: 10%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.28), transparent 68%);
+  animation-delay: 0s;
+}
+
+.orb-two {
+  width: 24%;
+  height: 24%;
+  min-width: 150px;
+  min-height: 150px;
+  right: 5%;
+  bottom: 8%;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.18), transparent 70%);
+  animation-delay: -3s;
+}
+
+/* Network nodes and lines */
+.network {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.82;
+  z-index: 3;
+}
+
+.node {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--accent-blue);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.95);
+  animation: pulse 2.8s ease-in-out infinite;
+}
+
+.node.aws {
+  background: var(--accent-orange);
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.95);
+}
+
+.node.green {
+  background: var(--accent-green);
+  box-shadow: 0 0 22px rgba(34, 197, 94, 0.9);
+}
+
+.n1 { left: 12%; top: 70%; }
+.n2 { left: 27%; top: 47%; animation-delay: -0.7s; }
+.n3 { left: 46%; top: 62%; animation-delay: -1.2s; }
+.n4 { left: 65%; top: 38%; animation-delay: -1.7s; }
+.n5 { left: 82%; top: 56%; animation-delay: -2.1s; }
+
+.line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.62), rgba(34, 197, 94, 0.42), transparent);
+  transform-origin: left center;
+  opacity: 0.72;
+}
+
+.l1 { left: 12.7%; top: 70.8%; width: 20%; transform: rotate(-34deg); }
+.l2 { left: 27.5%; top: 48%; width: 22%; transform: rotate(24deg); }
+.l3 { left: 46.5%; top: 62.6%; width: 24%; transform: rotate(-32deg); }
+.l4 { left: 65.5%; top: 39%; width: 20%; transform: rotate(28deg); }
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(3%, -5%) scale(1.06); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.5); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 860px) {
+  .orb-one {
+    width: 22%;
+    height: 22%;
+  }
+
+  .orb-two {
+    width: 28%;
+    height: 28%;
+  }
+}
+
+@media (max-width: 560px) {
+  .node, .line {
+    opacity: 0.45;
+  }
+
+  .orb-one {
+    width: 26%;
+    height: 26%;
+  }
+
+  .orb-two {
+    width: 32%;
+    height: 32%;
+  }
+}
