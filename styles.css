@@ -78,7 +78,7 @@ section {
 }
 a{
     color: #b84800;
-    text-decoration: none;
+    text-decoration: underline;
 } 
 
 h1 {
