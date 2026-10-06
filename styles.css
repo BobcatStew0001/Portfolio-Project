@@ -20,8 +20,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100vh;
-   
+    padding-bottom: 20px;
 }
 
 #hero h1 {
@@ -34,6 +33,11 @@
     font-size: 1.25rem;
     color: #b84800;
 }
+/*About Me Styles*/
+#about-me p + p {
+    margin-top: 1rem;
+}
+
 /*Global Styles*/
 body {
     background-color:  #1a1a2e;
