@@ -1,6 +1,6 @@
 # Zach Brown — Developer Portfolio
 
-A personal portfolio website showcasing my projects, skills, and journey as a Software Engineering student. Built to give visitors a clean, easy-to-navigate look at who I am as a developer and what I have built.
+A personal portfolio website showcasing my projects, skills, and journey as a Python / C# / .NET developer. Built to give visitors a clean, easy-to-navigate look at who I am as a developer and what I have built.
 
 ---
 
@@ -19,9 +19,9 @@ A personal portfolio website showcasing my projects, skills, and journey as a So
 
 ## 📄 Pages
 
-- **Home** — Introduction and overview
-- **Projects** — Showcase of completed projects with descriptions and links
-- **About** — Background, skills, and journey
+- **Home** — Introduction, about me, contact info, and resume download
+- **Skills** — Technical skills and tools
+- **Projects** — Showcase of completed projects with descriptions and GitHub links
 
 ---
 
